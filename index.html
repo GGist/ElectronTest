@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from localhost:3000/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Sep 2015 05:18:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <link rel="shortcut icon" href="assets/Runite_ore_rock_old.ico" type="image/x-icon">
+    <link rel="icon" href="assets/Runite_ore_rock_old.ico" type="image/x-icon">
+
+  <title>RuneTimer</title>
+  <link rel="stylesheet" media="all" href="assets/timer.self-6be25476400a011cca6d31adc23fa63111ac9f546f5d1f6bab51f121fc95cb397e76.css?body=1" />
+<link rel="stylesheet" media="all" href="assets/application.self-6b4c044d54a78d94fed800281fee6f9d8f19cd7632ab7d22134fdc5dbec68bc27e76.css?body=1" />
+<script type="text/javascript" src="assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca4197e76.js" onload="window.$ = window.jQuery = module.exports;"></script>
+  <script src="assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca4197e76.js"></script>
+<script src="assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b37e76.js"></script>
+<script src="assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f3942007e76.js?body=1"></script>
+<script src="assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f47e76.js?body=1"></script>
+<script src="assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c37e76.js?body=1"></script>
+<script src="assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be7e76.js?body=1"></script>
+<script src="assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a12487e76.js?body=1"></script>
+<script src="assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df007e76.js?body=1"></script>
+<script src="assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc897e76.js?body=1"></script>
+<script src="assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb257e76.js?body=1"></script>
+<script src="assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b47e76.js?body=1"></script>
+<script src="assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c7e76.js?body=1"></script>
+<script src="assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d7e76.js?body=1"></script>
+<script src="assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef85517e76.js?body=1"></script>
+<script src="assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d7e76.js?body=1"></script>
+<script src="assets/timer.self-0ea24310359687be526d16478341df4d8297f9416aafb51fddea8c31a6a4abf27e76.js?body=1"></script>
+<script src="assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca8197e76.js?body=1"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="wo5itsYsubL44KnlhH6fhOfGpae7y5ud6OVoRXaJsfUPhib2TISOaH9UYcvsfsKC7GMkUDHnQkbOZKXIXw7IHg==" />
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top rune-navbar">
+   <div class="container-fluid">
+      <div class="navbar-header">
+         <a class="navbar-brand rune-navbar-header" href="index.html" style="font-family:LilyScriptOne;">Rune Timer</a>
+      </div>
+      <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger rune-navbar-element"></span></a></li>
+         </ul>
+      </div>
+   </div>
+</nav>
+
+<div class="modal fade" id="alert-modal">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-body">
+            <div class="alert alert-info" role="alert">
+               <strong>Info: </strong>
+            </div>
+         </div>
+         <div class="modal-footer" style="display:flex;justify-content:center;align-items:center;">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<li id="world-list-item-template" class="list-group-item" style="display:none;color:white;"><span class=""></span> </li>
+
+<li class="list-group-item" id="world-timer-item-template" style="display:none;">
+   <div class="row" style="display:flex;justify-content:center;align-items:center;">
+      <div class="col-md-2" style="display:flex;justify-content:center;align-items:center;">
+         <label class="world-timer">XX:XX</label>
+      </div>
+      <div class="col-md-2" style="display:flex;justify-content:center;align-items:center;">
+         <div class="world-number">
+            <label>World: </label>
+         </div>
+      </div>
+      <div class="col-md-5" style="display:flex;justify-content:center;align-items:center;">
+                  <div class="btn-group" data-toggle="buttons" style="pointer-events:none;">
+                     <label class="btn btn-default">
+                     <input type="checkbox" id="rock-one" value="1">
+                     Rock One
+                     </label>
+                     <label class="btn btn-default">
+                     <input type="checkbox" id="rock-two" value="2">
+                     Rock Two
+                     </label>
+                  </div>
+      </div>
+      <div class="col-md-3" style="display:flex;justify-content:center;align-items:center;">
+         <div class="btn-group" role="group" style="float:right;">
+            <button type="button" class="btn btn-info timer-item-refresh"><span class="glyphicon glyphicon-repeat"></span></button>
+            <button type="button" class="btn btn-danger timer-item-remove"><span class="glyphicon glyphicon-remove"></span></button>
+         </div>
+      </div>
+   </div>
+</li>
+
+<li class="list-group-item" id="spec-world-timer-item-template" style="display:none;">
+   <div class="row" style="display:flex;justify-content:center;align-items:center;">
+      <div class="col-md-2">
+         <label>12:00</label>
+      </div>
+      <div class="col-md-2">
+         <label for="world-number">World: </label>
+      </div>
+      <div class="col-md-5">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default">
+                <input type="radio" id="rock-one" value="1">
+                Rock One
+            </label>
+            <label class="btn btn-default">
+                <input type="radio" id="rock-two" value="2">
+                Rock Two
+            </label>
+            <label class="btn btn-default">
+                <input type="radio" id="rock-zero" value="0">
+                Both
+            </label>
+        </div>
+      </div>
+      <div class="col-md-3">
+         <div class="btn-group" role="group" style="float:right;">
+            <button type="button" class="btn btn-success timer-item-refresh"><span class="glyphicon glyphicon-ok"></span></button>
+            <button type="button" class="btn btn-warning timer-item-refresh"><span class="glyphicon glyphicon-refresh"></span></button>
+            <button type="button" class="btn btn-danger timer-item-remove"><span class="glyphicon glyphicon-remove"></span></button>
+         </div>
+      </div>
+   </div>
+</li>
+
+<div class="container rune-document" style="padding-top:70px;overflow:auto;">
+   <div class="row">
+      <div class="col-md-4">
+         <div class="col-md-3" style="padding:0px;">
+            <ul id="world-list-1" class="list-unstyled world-list">
+            </ul>
+         </div>
+         <div class="col-md-3" style="padding:0px;">
+            <ul id="world-list-2" class="list-unstyled world-list">
+            </ul>
+         </div>
+         <div class="col-md-3" style="padding:0px;">
+            <ul id="world-list-3" class="list-unstyled world-list">
+            </ul>
+         </div>
+         <div class="col-md-3" style="padding:0px;">
+            <ul id="world-list-4" class="list-unstyled world-list">
+            </ul>
+         </div>
+      </div>
+      <div class="col-md-8">
+         <ul class="list-unstyled" id="world-timer-list">
+            <li class="list-group-item" id="add-timer-form">
+               <div class="form-group">
+                  <label for="world-number-input">World #</label>
+                  <input type="text" class="form-control" id="world-number-input" placeholder="Number">
+               </div>
+               <div class="form-group">
+                  <div class="btn-group" data-toggle="buttons" id="rock-number-input-list">
+                     <label class="btn btn-default">
+                     <input type="checkbox" id="rock-one" value="1">
+                     Rock One
+                     </label>
+                     <label class="btn btn-default">
+                     <input type="checkbox" id="rock-two" value="2">
+                     Rock Two
+                     </label>
+                  </div>
+                  <div class="btn-group" data-toggle="buttons" style="float:right;">
+                     <label class="btn btn-default">
+                     <input type="checkbox" value="">
+                     Speculative Timer
+                     </label>
+                  </div>
+               </div>
+               <div style="text-align:center;">
+                  <button type="submit" class="btn btn-default" id="start-timer">Start Timer</button>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
+
+</body>
+
+<!-- Mirrored from localhost:3000/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Sep 2015 05:18:55 GMT -->
+</html>

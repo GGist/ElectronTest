@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'LilyScriptOne';
+  src: url("LilyScriptOne-Regular.ttf");
+}
+/* Site Element Styles */
+/* line 11, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.rune-navbar {
+  background-color: #044E7A !important;
+}
+
+/* line 15, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.rune-navbar-header {
+  color: #3798D2 !important;
+}
+
+/* line 19, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.rune-navbar-header:hover {
+  color: #91C7E7 !important;
+}
+
+/* line 23, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.rune-navbar-element {
+  color: #3798D2 !important;
+}
+
+/* line 27, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.rune-navbar-element:hover {
+  color: #91C7E7 !important;
+}
+
+/* line 31, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.rune-document {
+  background-color: #0680C9 !important;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* End Site Element Styles */
+/* World List Styles */
+/* line 40, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.world-list > li {
+  cursor: pointer;
+}
+
+/* line 44, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.world-list-item-member {
+  background-color: #044E7A !important;
+}
+
+/* line 48, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.world-list-item-member:hover {
+  background-color: #3798D2 !important;
+}
+
+/* line 52, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.world-list-item-nonmember {
+  background-color: #3798D2 !important;
+}
+
+/* line 56, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.world-list-item-nonmember:hover {
+  background-color: #91C7E7 !important;
+}
+
+/* End World List Styles */
+/* World List Rocks Tracked */
+/* line 62, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.world-list-item-one-rock {
+  background-color: #999999 !important;
+}
+
+/* line 66, c:/Users/GG/GitHub/RuneTimer/app/assets/stylesheets/timer.scss */
+.world-list-item-two-rocks {
+  background-color: #000000 !important;
+}
+
+/* End World List Rocks Tracked */
